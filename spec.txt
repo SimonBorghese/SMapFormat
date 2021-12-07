@@ -1,0 +1,24 @@
+SMF specs:
+
+[4 bytes] "smap" in ASCII # This is the map signature, don't load anything without one
+
+[2 bytes] [Object Count] # The Object Count
+
+# FOR EVERY OBJECT
+
+	[2 bytes] [3d model file length] # This is the size of the preceeding string that holds the 3d model
+
+	[X bytes] [Location of 3d model to be the map] # This should be a stirng that contains the realitve location of the 3d model that is to be used
+
+	[2 bytes] [X Position of model]
+	[2 bytes] [Y Position of model]
+	[2 bytes] [Z Position of model]
+	[2 bytes] [Rotation, in degrees of the model]
+	[1 byte] [X axis rotation]
+	[1 byte] [Y axis rotation]
+	[1 byte] [Z axis rotation]
+	[2 bytes] [X scale of model]
+	[2 bytes] [Y scale of model]
+	[2 bytes] [Z scale of model]
+
+[4 bytes] "maps" in ASCII
